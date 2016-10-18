@@ -1,0 +1,31 @@
+{
+  "name": "confirmation",
+  "version": "1.0.0",
+  "description": "Tmj default confirmation approach",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TMJPEngineering/confirmation.git"
+  },
+  "keywords": [
+    "tmj",
+    "confirmation",
+    "tmj-confirmation",
+    "default-confirmation"
+  ],
+  "author": "TMJP Engineering, Rej Mediodia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TMJPEngineering/confirmation/issues"
+  },
+  "homepage": "https://github.com/TMJPEngineering/confirmation#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-bootstrap-modal": "^1.0.3",
+    "angular-ui-bootstrap": "^2.2.0",
+    "bootstrap": "^3.3.7"
+  }
+}

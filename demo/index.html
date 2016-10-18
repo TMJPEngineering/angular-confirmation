@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="confirmation">
+  <head>
+    <title>TMJ Angular Confirmation</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" type = "text/css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-theme.css" type = "text/css">
+  </head>
+  <body>
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-md-10 col-md-offset-1">
+          <h1>TMJ Angular Confirmation Demo</h1>
+          <hr>
+            <div class = "col-md-12" ng-controller = "confirmSampleCtrl as csc">
+              <h3>Default Confirmation</h3>
+              <hr>
+              <br>
+              <h4>#Simple Message</h4>
+              <button class = "btn btn-default" ng-click = "csc.showConfirm()">Click Me!</button>
+              <hr>
+              <uib-tabset active="active">
+                <uib-tab index="0" heading="Html">
+                  <pre ng-bind = "csc.html"></pre>
+                </uib-tab>
+                <uib-tab index="1" heading="Javascript">
+                  <pre ng-bind="csc.javascript"></pre>
+                </uib-tab>
+              </uib-tabset>
+              <hr>
+              <br>
+              <h4>#Simple Message With Angular Bind and Title</h4>
+              <button class = "btn btn-default" ng-click = "csc.showConfirmBind()">Click Me!</button>
+              <hr>
+              <uib-tabset active="active2">
+                <uib-tab index="0" heading="Html">
+                  <pre ng-bind = "csc.htmlBind"></pre>
+                </uib-tab>
+                <uib-tab index="1" heading="Javascript">
+                  <pre ng-bind="csc.javascriptBind"></pre>
+                </uib-tab>
+              </uib-tabset>
+            </div>
+            <div class = "col-md-12" ng-controller = "addDeleteConfirmSampleCtrl as adsc">
+              <h3>Default Add/Delete Confirmation</h3>
+              Add/Delete confirmation has a default message w/c require a value and
+              an action(w/c already defined and can be override)
+              <hr>
+              <br>
+              <h4>#Simple Add Confirmation</h4>
+              <button class = "btn btn-default" ng-click = "adsc.showConfirm()">Click Me!</button>
+              <hr>
+              <uib-tabset active="active3">
+                <uib-tab index="0" heading="Html">
+                  <pre ng-bind = "adsc.html"></pre>
+                </uib-tab>
+                <uib-tab index="1" heading="Javascript">
+                  <pre ng-bind="adsc.javascript"></pre>
+                </uib-tab>
+              </uib-tabset>
+              <hr>
+              <br>
+              <h4>#Simple Delete Confirmation</h4>
+              <button class = "btn btn-default" ng-click = "adsc.showDeleteConfirm()">Click Me!</button>
+              <hr>
+              <uib-tabset active="active4">
+                <uib-tab index="0" heading="Html">
+                  <pre ng-bind = "adsc.htmlDelete"></pre>
+                </uib-tab>
+                <uib-tab index="1" heading="Javascript">
+                  <pre ng-bind="adsc.javascriptDelete"></pre>
+                </uib-tab>
+              </uib-tabset>
+              <hr>
+              <br>
+              <h4>#Overriding Message With Angular Bind</h4>
+              <button class = "btn btn-default" ng-click = "adsc.showConfirmBind()">Click Me!</button>
+              <hr>
+              <uib-tabset active="active2">
+                <uib-tab index="0" heading="Html">
+                  <pre ng-bind = "adsc.htmlBind"></pre>
+                </uib-tab>
+                <uib-tab index="1" heading="Javascript">
+                  <pre ng-bind="adsc.javascriptBind"></pre>
+                </uib-tab>
+              </uib-tabset>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Required Script -->
+    <script src = "../node_modules/angular/angular.min.js"></script>
+    <script src = "../node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <!-- Module level script -->
+    <!-- TMJ MODAL -->
+    <script src = "../node_modules/angular-bootstrap-modal/dist/angular-bootstrap-modal.js"></script>
+    <!-- CONFIRMATION  -->
+    <script src = "../dist/angular-confirm.js"></script>
+    <!-- <script src = "../src/confirm.module.js"></script>
+    <script src = "../src/constants/confirm.constant.js"></script>
+    <script src = "../src/templates/confirmation.run.js"></script>
+    <script src = "../src/controllers/confirm-modal-instance.controller.js"></script>
+    <script src = "../src/services/confirm.service.js"></script> -->
+
+    <!--  Page level script -->
+    <script src = "js/confirmation.module.js"></script>
+    <script src = "js/default-confirmation.controller.js"></script>
+    <script src = "js/add-delete-confirm.controller.js"></script>
+  </body>
+</html>
